@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/styles/min/style.min.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="app-name">Editor App</h1>
+    </header>
+
+    <main>
+        <!-- Start Section One -->
+        <div class="left">
+            <div class="img-info">
+                <h2 class="title">Image Info</h2>
+                <p id="img-name"><span>Name : </span>insta</p>
+                <p id="img-format"><span>Format : </span>svg</p>
+            </div>
+            <div class="editor">
+                <h2 class="title">Online Edit :</h2>
+                <div id="edit-tools">
+                    <div id="input-tools">
+                        <div class="input-group">
+                            <p>Border-radius</p>
+                            <div class="progress-bar">
+                                <input type="range" min="0" max="100" id="radius">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <p>Blur</p>
+                            <div class="progress-bar">
+                                <input type="range" min="0" max="100" id="radius">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <p>Rotate-Y</p>
+                            <div class="progress-bar">
+                                <input type="range" min="0" max="100" id="radius">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <p>Rotate-X</p>
+                            <div class="progress-bar">
+                                <input type="range" min="0" max="100" id="radius">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <p>Skew-Y</p>
+                            <div class="progress-bar">
+                                <input type="range" min="0" max="100" id="radius">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <p>Skew-X</p>
+                            <div class="progress-bar">
+                                <input type="range" min="0" max="100" id="radius">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <p>Scale</p>
+                            <div class="progress-bar">
+                                <input type="range" min="0" max="100" id="radius">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <p>Contrast</p>
+                            <div class="progress-bar">
+                                <input type="range" min="0" max="100" id="radius">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <p>GrayScale</p>
+                            <div class="progress-bar">
+                                <input type="range" min="0" max="100" id="radius">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <p>Opacity</p>
+                            <div class="progress-bar">
+                                <input type="range" min="0" max="100" id="radius">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End Section One -->
+
+        <!-- Start Section Two -->
+        <div class="center">
+            <img src="./assets/images/Demo.png" id="main-img" alt="">
+            <button id="clear">Clear All Data</button>
+        </div>
+        <!-- End Section Two -->
+
+        <!-- Start Section Three -->
+        <div class="right">
+            <div class="img-styles">
+                <h2>Styles :</h2>
+                <div id="styles">
+                    <div class="section-1">
+                        <p id="radius">Radius : <span>4px</span></p>
+                        <p id="blur">Blur : <span>17px</span></p>
+                    </div>
+                    <div class="section-2">
+                        <p id="rotate-y">Rotate-Y : <span>50deg</span></p>
+                        <p id="rotate-x">Rotate-X : <span>0.5%</span></p>
+                    </div>
+                    <div class="section-3">
+                        <p id="skew-x">Skew-Y : <span>40px</span></p>
+                        <p id="skew-x">Skew-X : <span>1.5</span></p>
+                    </div>
+                    <div class="section-4">
+                        <p id="scale">Scale : <span>4deg</span></p>
+                        <p id="contrast">Contrast : <span>10px</span></p>
+                    </div>
+                    <div class="section-5">
+                        <p id="grayscale">GrayScale : <span>74px</span></p>
+                        <p id="opacity">Opacity : <span>24px</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Section Three -->
+
+
+    </main>
+
+    <script src="./assets/scripts/bundle.js"></script>
+</body>
+
+</html>

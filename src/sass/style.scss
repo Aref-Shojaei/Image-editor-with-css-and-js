@@ -1,0 +1,259 @@
+@import './colors';
+@import './fonts';
+@import './mixins';
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: $default-fontSize;
+    font-family: $font-regular;
+}
+
+
+//** Header start
+header {
+    @include flex(flex, center, center, null);
+    padding: 16px;
+    border-bottom: 1px solid $light3-color;
+
+    #app-name {
+        @include font($font-bold, 20px);
+        color: $dark-color;
+    }
+
+    #download-file {
+        @include flex(flex, center, null, null);
+        @include font($font-regular, 14px);
+        padding: 8px 12px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: $white-color;
+        background-color: $purple-color;
+
+        span {
+            @include flex(flex, center, center, null);
+            margin-right: 8px;
+        }
+    }
+}
+
+//** Header end
+
+//** Main start
+main {
+    @include flex(flex, stretch, space-between, null);
+
+    &>div {
+        padding: 24px;
+        border: 1px solid $light3-color;
+    }
+
+    .left {
+        height: 88vh;
+        overflow-y: auto;
+        background-color: $bg-section;
+
+        //** Section 1
+        .img-info {
+            & *:not(:first-child) {
+                margin-top: 16px;
+            }
+
+            .title {
+                color: $purple2-color;
+                @include font($font-medium, 24px);
+            }
+
+            p {
+                @include font($font-medium, 14px);
+                color: $dark-color;
+
+                span {
+                    color: $gray-color;
+                }
+            }
+        }
+
+        //** Section 2
+        .editor {
+            margin-top: 64px;
+
+            .title {
+                color: $purple2-color;
+                @include font($font-medium, 24px);
+            }
+
+            #edit-tools {
+                
+                #input-tools {
+                    .input-group {
+                        margin-top: 24px;
+                        &:not(:last-child) {
+                            margin-bottom: 24px;
+                        }
+
+                        p {
+                            @include font($font-medium, 14px);
+                            color: $gray-color;
+                            margin-bottom: 16px;
+                        }
+
+                        .progress-bar{
+                            background-color: $light4-color;
+                            width: 200px;
+                            height: 13px;
+                            border-radius: 50px;
+                            position: relative;
+                            input {
+                                z-index: 2;
+                                position: absolute;
+                                -webkit-appearance: none;
+                                width: 100%;
+                                outline: none;
+                                height: 100%;
+                                background: none;
+    
+                                &::-webkit-slider-thumb {
+                                    -webkit-appearance: none;
+                                    appearance: none;
+                                    width: 24px;
+                                    height: 24px;
+                                    border-radius: 50%;
+                                    background: $blue-color;
+                                    box-shadow: 0px 2px 4px $blue-color;
+                                    cursor: pointer;
+                                }
+                            } 
+                            .progress{
+                                z-index: 1;
+                                position: absolute;
+                                border-radius: 50px;
+                                height: 100%;
+                                width: 50%;
+                                top: 0;
+                                left: 0;
+                                background-color: $blue2-color;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .center {
+        position: relative;
+        @include flex(flex, center, center, null);
+        background: $light2-color;
+        width: 53%;
+        height: 88vh;
+        overflow: hidden;
+
+        img#main-img {
+            width: 650px;
+            height: auto;
+        }
+
+        button#clear {
+            @include font($font-medium, 12px);
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            border: 2px solid $danger-color;
+            color: $danger-color;
+            background: none;
+            z-index: 5;
+            padding: 6px 24px;
+            position: absolute;
+            bottom: 24px;
+
+            &:hover {
+                color: $white-color;
+                background-color: $danger-color;
+                transition: background-color .5s ease;
+            }
+        }
+    }
+
+    .right {
+        height: 88vh;
+        overflow-y: auto;
+        background-color: $bg-section;
+
+        //** Section 1
+        .img-sizes {
+            margin-bottom: 64px;
+
+            h2 {
+                color: $purple2-color;
+                @include font($font-medium, 24px);
+                margin-bottom: 24px;
+            }
+
+            #sizes {
+                &>div {
+                    @include flex(flex, center, space-between, null);
+                }
+
+                &>div:not(:first-child) {
+                    margin-top: 16px
+                }
+
+                p {
+                    @include font($font-medium, 14px);
+                    color: $gray-color;
+
+                    &:first-child {
+                        margin-right: 54px;
+                    }
+
+                    span {
+                        color: $dark-color;
+                    }
+                }
+            }
+        }
+
+        //** Section 2
+        .img-styles {
+            margin-bottom: 64px;
+
+            h2 {
+                color: $purple2-color;
+                @include font($font-medium, 24px);
+                margin-bottom: 24px;
+            }
+
+            #styles {
+                &>div {
+                    @include flex(flex, center, space-between, null);
+                }
+
+                &>div:not(:first-child) {
+                    margin-top: 16px
+                }
+
+                p {
+                    @include font($font-medium, 14px);
+                    color: $gray-color;
+
+                    &:first-child {
+                        margin-right: 54px;
+                    }
+
+                    span {
+                        color: $dark-color;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+//** Main end

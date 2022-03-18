@@ -1,0 +1,17 @@
+{
+  "name": "editor-app",
+  "version": "1.0.0",
+  "description": "this app is a editor image wich you can use this app for your images :)",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "babel":"babel src/index.js -o dist/assets/scripts/bundle.js --presets env --watch"
+  },
+  "author": "aref shojaei",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}

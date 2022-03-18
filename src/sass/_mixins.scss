@@ -1,0 +1,14 @@
+//** Mixins
+
+@mixin flex($flex,$align,$justify,$wrap) {
+    display: $flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+}
+
+@mixin font($name,$size) {
+    font-family: $name;
+    font-size: $size;
+}
+

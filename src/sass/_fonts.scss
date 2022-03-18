@@ -1,0 +1,28 @@
+//** Fonts
+$default-fontSize : 16px;
+
+$font-bold: Poppins-Bold;
+$font-medium: Poppins-Medium;
+$font-regular: Poppins-Regular;
+
+$route : '../../fonts';
+
+@font-face {
+    font-family: $font-bold;
+    src: url(#{$route}/Poppins-Bold.ttf);
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: $font-medium;
+    src: url(#{$route}/Poppins-Medium.ttf);
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: $font-regular;
+    src: url(#{$route}/Poppins-Regular.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+
